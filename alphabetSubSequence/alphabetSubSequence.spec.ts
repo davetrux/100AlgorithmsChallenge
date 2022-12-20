@@ -1,6 +1,6 @@
 import { alphabetSubsequence } from './alphabetSubsequence';
 
-xdescribe(alphabetSubsequence.name, () => {
+describe(alphabetSubsequence.name, () => {
     it('Test 1', () => {
         // arrange
         const data = 'effg';
@@ -21,5 +21,16 @@ xdescribe(alphabetSubsequence.name, () => {
 
         // assert
         expect(response).toBe(true);
+    });
+
+    it('Test 3', () => {
+        // arrange
+        const data = 'zab';
+
+        // act
+        const response = alphabetSubsequence(data);
+
+        // assert
+        expect(response).toBe(false);
     });
 });

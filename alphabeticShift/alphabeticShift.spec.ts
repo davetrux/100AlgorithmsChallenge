@@ -1,6 +1,6 @@
 import { alphabeticShift } from './alphabeticShift';
 
-xdescribe(alphabeticShift.name, () => {
+describe(alphabeticShift.name, () => {
     it('Test 1', () => {
         // arrange
         const data = 'crazy';
@@ -10,5 +10,15 @@ xdescribe(alphabeticShift.name, () => {
 
         // assert
         expect(response).toBe('dsbaz');
+    });
+    it('Test 2', () => {
+        // arrange
+        const data = 'CRAZY';
+
+        // act
+        const response = alphabeticShift(data);
+
+        // assert
+        expect(response).toBe('DSBAZ');
     });
 });
