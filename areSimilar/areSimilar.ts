@@ -1,5 +1,8 @@
 export function areSimilar(a: number[], b: number[]): boolean {
-
+  a.sort()
+  b.sort()
+  const result = (a.toString() === b.toString())
+  return result
 }
 
 // console.log(areSimilar([1, 2, 3], [1, 2, 3]));
